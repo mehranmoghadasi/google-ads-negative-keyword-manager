@@ -1,0 +1,4 @@
+Campaign,Ad group,Keyword,Match type,Status
+SEO_Search,Audit,"""seo audit service""",Phrase,Enabled
+SEO_Search,Audit,[free seo tools],Exact,Enabled
+SEO_Search,Audit,[old term],Exact,Paused
