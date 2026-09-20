@@ -34,8 +34,8 @@ Negative-keyword hygiene is one of the highest-ROI tasks in paid search and one 
 
 | Command | What it does | Replaces |
 |---|---|---|
-| `negkw suggest` | Mines a search-term report (impressions, spend, CTR, zero-conversion rules) → Editor-ready CSV with a *reason* per row | `google-ads-search-term-cleaner`, v1 of this repo |
-| `negkw conflicts` | Cross-checks negatives against keywords using Google's actual exact / phrase / broad semantics, scoped by campaign and ad group | `google-ads-negative-conflict-finder` |
+| `negkw suggest` | Mines a search-term report (impressions, spend, CTR, zero-conversion rules) → Editor-ready CSV with a *reason* per row | v1 of this repo + a former standalone search-term cleaner |
+| `negkw conflicts` | Cross-checks negatives against keywords using Google's actual exact / phrase / broad semantics, scoped by campaign and ad group | a former standalone conflict finder |
 | `negkw audit` | Runs `suggest`, then screens each proposed negative against live keywords — safe ones export, self-blocking ones are quarantined with the keyword they'd hit | *new* |
 
 No dependencies. Handles real Google Ads exports: preamble lines, `Impr.` vs `Impressions`, `$1,312.20`, `0.30%`, and the trailing `Total:` row.
@@ -136,7 +136,6 @@ free seo tools,SEO_Search,48.20,1312,[free seo tools],exact,high
 
 - [google-ads-campaign-playbook](https://github.com/mehranmoghadasi/google-ads-campaign-playbook) — strategy framework and ROAS calculator that pairs with this tool's hygiene workflow
 - [agency-report-builder](https://github.com/mehranmoghadasi/agency-report-builder) — client-ready reporting once the account is clean
-- Superseded: [google-ads-search-term-cleaner](https://github.com/mehranmoghadasi/google-ads-search-term-cleaner), [google-ads-negative-conflict-finder](https://github.com/mehranmoghadasi/google-ads-negative-conflict-finder) — their logic now lives here
 
 ## Roadmap
 
