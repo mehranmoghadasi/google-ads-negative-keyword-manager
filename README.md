@@ -1,6 +1,6 @@
 # negkw — Google Ads Negative Keyword Manager
 
-[![Tests](https://img.shields.io/badge/tests-15%20passing-brightgreen?logo=pytest&logoColor=white)](tests/test_engine.py)
+[![CI](https://github.com/mehranmoghadasi/google-ads-negative-keyword-manager/actions/workflows/python-app.yml/badge.svg)](https://github.com/mehranmoghadasi/google-ads-negative-keyword-manager/actions/workflows/python-app.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Zero deps](https://img.shields.io/badge/dependencies-none-06B6D4)](pyproject.toml)
@@ -78,7 +78,7 @@ Parsing is isolated in `io.py`, pure logic in `engine.py`, and dataclass models 
 ## Tech Stack
 
 - Python 3.10+ (stdlib only: `csv`, `dataclasses`, `argparse`, `re`)
-- Testing: `pytest`; lint: `ruff` (run both with `pip install -e ".[dev]" && ruff check src tests && pytest -q`)
+- Testing: `pytest`; lint: `ruff`; CI: GitHub Actions on Python 3.10 and 3.12 (`pip install -e ".[dev]" && ruff check src tests && pytest -q`)
 
 ## Installation
 
@@ -159,6 +159,7 @@ google-ads-negative-keyword-manager/
 │   ├── fixtures/        # real-shaped Google Ads exports
 │   └── test_engine.py
 ├── examples/            # copy of fixtures for quick trial
+├── .github/workflows/python-app.yml
 ├── pyproject.toml
 └── README.md
 ```
